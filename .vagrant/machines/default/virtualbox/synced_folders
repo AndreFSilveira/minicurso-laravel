@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/blog":{"type":null,"mount_options":[],"guestpath":"/home/vagrant/blog","hostpath":"/home/minicurso/blog","disabled":false},"/vagrant":{"guestpath":"/vagrant","hostpath":"/home/minicurso/blog","disabled":false}}}
