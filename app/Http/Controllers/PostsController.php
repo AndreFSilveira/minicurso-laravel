@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Post;
+use App\Http\Requests\CreatePostRequest;
 
 class PostsController extends Controller
 {
@@ -36,7 +37,7 @@ class PostsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreatePostRequest $request)
     {
         //dd($request->title);
         Post::create($request->all());

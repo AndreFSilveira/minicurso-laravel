@@ -27,7 +27,7 @@
 					<td>{{$post->title}}</td>
 					<td>
 						<a href="/posts/edit/{{ $post->id }}" class="btn btn-primary">Editar</a>
-						<a href="/posts/destroy/{{ $post->id }}" class="btn btn-danger">Deletar</a>
+						<a href="/posts/destroy/{{ $post->id }}" class="btn btn-danger delete-post">Deletar</a>
 					</td>
 				</tr>
 			@endforeach
@@ -35,3 +35,18 @@
 	</table>
 	{!! $posts->render() !!}
 @endsection
+
+<script type="text/javascript">
+     $(".delete-post").click(function (event) {
+                 var x = confirm("Deseja realmente deletar o post?");
+                    if (x) {
+                        return true;
+                    }
+                    else {
+
+                        event.preventDefault();
+                        return false;
+                    }
+
+                });
+</script>
